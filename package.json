@@ -1,7 +1,7 @@
 {
-  "name": "webpack-project-template",
+  "name": "ui-component-library",
   "version": "1.0.0",
-  "description": "An ongoing repository for starting a project with webpack.",
+  "description": "An ongoing repository for vanilla javascript UI components.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,8 +16,9 @@
   "devDependencies": {
     "css-loader": "^6.7.3",
     "eslint": "^8.36.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.2",

@@ -1,18 +1,6 @@
 import './style.css';
-import printMe from './other-stuff';
+import displayMenu from './display/menu-display';
+import downClick from './components/drop-down-function';
 
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
-
-  element.innerHTML = 'HI';
-
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-  return element;
-}
-
-document.body.appendChild(component());
+displayMenu();
+downClick();

@@ -7,30 +7,22 @@ export default function components() {
   //
   // .addChild(new Element goes here)
   //
-  //  .build() at the end of parent div to recursively build
+  // .addText() to place text
+  //
+  // .build() after last child of most parent div to recursively build
   //
   //
   // Div with class & id
   function divCI(className, id) {
-    new Element('div').addAttributes({
+    return new Element('div').addAttributes({
       class: className,
       id,
     });
   }
 
-  // div with class, id, & text
-  function divCIT(className, id, text) {
-    new Element('div')
-      .addAttributes({
-        class: className,
-        id,
-      })
-      .addText(text);
-  }
-
   // button with class, id, text
   function butCIT(className, id, text) {
-    new Element('button')
+    return new Element('button')
       .addAttributes({
         class: className,
         id,
@@ -50,5 +42,5 @@ export default function components() {
     });
   }
 
-  return { divCI, divCIT, butCIT, radCINCh, };
+  return { divCI, butCIT, radCINCh, };
 }

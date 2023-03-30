@@ -1,7 +1,6 @@
 import selectors from '../model/selectors';
 
 function dropdown(e, submenus) {
-  console.log('submenus ', submenus);
   submenus.forEach((sub) => {
     if (!sub.classList.contains('show')) {
       sub.classList.add('show');

@@ -146,4 +146,6 @@ function carousel() {
 export default function displayCarousel() {
   document.body.appendChild(carousel());
   selectors().imgContainer.style.left = '10%';
+  const defaultDot = document.getElementById('dot0')
+  defaultDot.classList.add('current-dot');
 }

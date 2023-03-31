@@ -1,5 +1,22 @@
 import selectors from '../model/selectors';
 
+
+
+function highlightDot(num) {
+  const sel = selectors();
+  const dotID = `dot${num}`;
+  const dot = document.getElementById(dotID);
+  const className = 'current-dot';
+  const parent = sel.dotContainer;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const child of parent.children) {
+    if (child.classList.contains(className)) {
+      child.classList.remove(className);
+    }
+  }
+  dot.classList.add(className);
+}
+
 function advanceForward() {
   const sel = selectors();
 
@@ -9,7 +26,10 @@ function advanceForward() {
   if (percentage > -710) {
     const newPercentage = `${percentage - 80}%`;
     sel.imgContainer.style.left = newPercentage;
+    const dotNum = ((percentage - 10) / 80) * -1 + 1;
+    highlightDot(dotNum);
   }
+  
 }
 
 function advanceBack() {
@@ -17,25 +37,15 @@ function advanceBack() {
   const { left } = sel.imgContainer.style;
   console.log('left value ', sel.imgContainer.style.left);
   const percentage = parseFloat(left);
+  console.log('percentage', percentage);
   if (percentage < 10) {
     const newPercentage = `${percentage + 80}%`;
     sel.imgContainer.style.left = newPercentage;
+    const dotNum = ((percentage - 10) / 80) * -1 - 1;
+    console.log('advanceBack dotNum', dotNum);
+    highlightDot(dotNum);
   }
-}
-
-function highlightDot(num) {
-  const sel = selectors()
-  const dotID = `dot${num}`
-  const dot = document.getElementById(dotID)
-  const className = 'current-dot'
-  const parent = sel.dotContainer
-  // eslint-disable-next-line no-restricted-syntax
-  for (const child of parent.children) {
-    if (child.classList.contains(className)) {
-      child.classList.remove(className)
-    }
-  }
-  dot.classList.add(className)
+  
 }
 
 // function autoPlay() {
@@ -61,7 +71,7 @@ function dotClicks(e) {
   console.log('leftNumber', leftNumber);
   const leftPercentage = `${leftNumber}%`;
   selectors().imgContainer.style.left = leftPercentage;
-  highlightDot(dotNum)
+  highlightDot(dotNum);
 }
 
 function carouselEvent() {

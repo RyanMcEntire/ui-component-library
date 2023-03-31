@@ -9,6 +9,7 @@ import headlines from './img/headlines.jpg';
 import kashif from './img/kashif.jpg';
 import kleeer from './img/kleeer.jpg';
 import shakatak from './img/shakatak.jpg';
+import selectors from '../model/selectors';
 
 const ele = components();
 
@@ -143,6 +144,6 @@ function carousel() {
 }
 
 export default function displayCarousel() {
-  console.log('display carousel ');
   document.body.appendChild(carousel());
+  selectors().imgContainer.style.left = "10%"
 }

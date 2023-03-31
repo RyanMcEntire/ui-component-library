@@ -21,7 +21,6 @@ body {
   margin: 0;
 }
 
-
 .shadow {
   position: absolute;
   width: 100%;
@@ -32,23 +31,27 @@ body {
   border-radius: 1.5rem;
   top: 0;
   left: 0;
+  /* 
+  The following is a guideline to line up content
   background: linear-gradient(#9c4848, #641919) no-repeat 10%/1px 100%;
+  */
 }
 
 .img-container {
   display: flex;
   position: absolute;
   height: 100%;
-  left: 10%;
-  left: -70%;
-  left: -150%;
-  left: -230%;
+  /* left: 10%; */
+  /* left: -70%; */
+  /* left: -150%; */
+  /* left: -230%; */
   /* left: -310%; */
   /* left: -390%; */
   /* left: -470%; */
   /* left: -550%; */
   /* left: -630%; */
   /* left: -710%; */
+  
 }
 
 .albumArt {
@@ -71,8 +74,8 @@ body {
   width: 2rem;
   height: 2rem;
   background-color: #8fb984;
-  border-radius: 0.8rem;
-  box-shadow: 0.1rem 0.1rem 0.3rem rgba(49, 49, 49, 0.733);
+  border-radius: .8rem;
+  box-shadow: .1rem .1rem .3rem rgba(49, 49, 49, 0.733);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +87,7 @@ body {
 
 .nav-dot-container {
   display: flex;
-  gap: 0.7rem;
+  gap: .7rem;
 }
 
 .nav-dot {
@@ -92,5 +95,5 @@ body {
   height: 1rem;
   width: 1rem;
   border-radius: 1rem;
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(49, 49, 49, 0.733);
+  box-shadow: .2rem .1rem .3rem rgba(49, 49, 49, 0.733);
 }

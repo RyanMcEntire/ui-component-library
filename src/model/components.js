@@ -20,6 +20,13 @@ export default function components() {
     });
   }
 
+  // function divCV(className, id) {
+  //   return new Element('div').addAttributes({
+  //     class: className,
+  //     id,
+  //   });
+  // }
+
   // button with class, id, text
   function butCIT(className, id, text) {
     return new Element('button')

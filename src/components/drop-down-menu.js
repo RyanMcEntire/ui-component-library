@@ -8,7 +8,7 @@ function menu() {
     .addChild(
       ele
         .divCI('rectangle main', 'menu-main')
-        .addChild(ele.divCI('menu-header menu-text', '').addText('Main Button'))
+        .addChild(ele.divCI('menu-header menu-text', '').addText('Test Menu'))
         .addChild(ele.butCIT('dropdown', 'dropdown', 'more'))
     )
     .addChild(ele.divCI('submenu', 'sub1').addText('item 1'))

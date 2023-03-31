@@ -1,0 +1,46 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rectangle {
+  background-color: rgb(187, 187, 255);
+  border: solid 1px rgb(117, 117, 185);
+  height: 1.5rem;
+  align-items: center;
+}
+
+.menu-container {
+  width: 25rem;
+  margin: 3rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submenu {
+  background-color: rgb(187, 187, 255);
+  border: solid 0px rgb(117, 117, 185);
+  color: rgba(0, 0, 0, 0);
+  padding-left: 5rem;
+  height: 0;
+  font-size: 0;
+  transition-property: height, font-size, color, border;
+  transition-duration: 0.3s, 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, 0.1s;
+}
+
+.show {
+  height: 1.5rem;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  border: solid 1px rgb(117, 117, 185);
+  transition-property: height, font-size, color, border;
+  transition-duration: 0.3s, 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, 0.1s;
+}

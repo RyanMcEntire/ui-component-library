@@ -1,4 +1,4 @@
-import selectors from '../model/selectors';
+import selectors from "../model/selectors";
 
 function dropdown(e, submenus) {
   submenus.forEach((sub) => {

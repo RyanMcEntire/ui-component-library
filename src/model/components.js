@@ -42,5 +42,14 @@ export default function components() {
     });
   }
 
-  return { divCI, butCIT, radCINCh, };
+  function imgSACI(src, alt, className, id) {
+    return new Element('img').addAttributes({
+      src,
+      alt,
+      class: className,
+      id,
+    });
+  }
+
+  return { divCI, butCIT, radCINCh, imgSACI };
 }

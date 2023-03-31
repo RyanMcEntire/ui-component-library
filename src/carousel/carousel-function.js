@@ -38,6 +38,10 @@ function highlightDot(num) {
   dot.classList.add(className)
 }
 
+// function autoPlay() {
+
+// }
+
 function manageClicks(e) {
   const eventID = e.target.id;
   const actions = {

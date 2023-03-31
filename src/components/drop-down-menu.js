@@ -19,4 +19,8 @@ function menu() {
     .build();
 }
 
-export default menu;
+function displayMenu() {
+  document.body.appendChild(menu());
+}
+
+export default displayMenu

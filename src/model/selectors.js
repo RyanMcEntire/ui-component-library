@@ -5,6 +5,8 @@ export default function selectors() {
     forward: document.getElementById('forward'),
     back: document.getElementById('back'),
     frame: document.getElementById('frame'),
-    imgContainer: document.getElementById('img-container')
+    imgContainer: document.getElementById('img-container'),
+    dotContainer: document.getElementById('nav-dot-container'),
+    allDots: document.querySelectorAll('.nav-dot')
   };
 }

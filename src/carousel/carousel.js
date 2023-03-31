@@ -81,54 +81,54 @@ function imageSliderFrame() {
 function navBar() {
   return ele.divCI('carousel-nav-bar', '').addChild(
     ele
-      .divCI('nav-dot-container', '')
+      .divCI('nav-dot-container', 'nav-dot-container')
       .addChild(
-        ele.divCI('nav-dot', 'dot1').addAttributes({
+        ele.divCI('nav-dot', 'dot0').addAttributes({
           value: 0,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot2').addAttributes({
+        ele.divCI('nav-dot', 'dot1').addAttributes({
           value: 1,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot3').addAttributes({
+        ele.divCI('nav-dot', 'dot2').addAttributes({
           value: 2,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot4').addAttributes({
+        ele.divCI('nav-dot', 'dot3').addAttributes({
           value: 3,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot5').addAttributes({
+        ele.divCI('nav-dot', 'dot4').addAttributes({
           value: 4,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot6').addAttributes({
+        ele.divCI('nav-dot', 'dot5').addAttributes({
           value: 5,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot7').addAttributes({
+        ele.divCI('nav-dot', 'dot6').addAttributes({
           value: 6,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot8').addAttributes({
+        ele.divCI('nav-dot', 'dot7').addAttributes({
           value: 7,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot9').addAttributes({
+        ele.divCI('nav-dot', 'dot8').addAttributes({
           value: 8,
         })
       )
       .addChild(
-        ele.divCI('nav-dot', 'dot10').addAttributes({
+        ele.divCI('nav-dot', 'dot9').addAttributes({
           value: 9,
         })
       )
@@ -145,5 +145,5 @@ function carousel() {
 
 export default function displayCarousel() {
   document.body.appendChild(carousel());
-  selectors().imgContainer.style.left = "10%"
+  selectors().imgContainer.style.left = '10%';
 }

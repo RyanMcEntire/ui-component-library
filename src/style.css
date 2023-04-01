@@ -51,7 +51,7 @@ body {
   /* left: -550%; */
   /* left: -630%; */
   /* left: -710%; */
-  transition: left 1.5s ease-out;
+  transition: left 1.5s ease-in-out;
 }
 
 .albumArt {
@@ -98,10 +98,10 @@ body {
   box-shadow: 0.2rem 0.1rem 0.3rem rgba(49, 49, 49, 0.733);
   cursor: pointer;
   border: solid 2px #48c494;
-  transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .current-dot {
   background-color: #fff;
-  transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-in-out;
 }

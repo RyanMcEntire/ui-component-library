@@ -7,6 +7,6 @@ export default function selectors() {
     frame: document.getElementById('frame'),
     imgContainer: document.getElementById('img-container'),
     dotContainer: document.getElementById('nav-dot-container'),
-    allDots: document.querySelectorAll('.nav-dot')
+    allDots: document.querySelectorAll('.nav-dot'),
   };
 }

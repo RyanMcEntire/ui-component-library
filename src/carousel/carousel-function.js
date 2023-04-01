@@ -1,7 +1,5 @@
 import selectors from '../model/selectors';
 
-
-
 function highlightDot(num) {
   const sel = selectors();
   const dotID = `dot${num}`;
@@ -29,7 +27,10 @@ function advanceForward() {
     const dotNum = ((percentage - 10) / 80) * -1 + 1;
     highlightDot(dotNum);
   }
-  
+  if (percentage === -710) {
+    sel.imgContainer.style.left = '10%';
+    highlightDot(0);
+  }
 }
 
 function advanceBack() {
@@ -45,12 +46,24 @@ function advanceBack() {
     console.log('advanceBack dotNum', dotNum);
     highlightDot(dotNum);
   }
-  
+  if (percentage === 10) {
+    sel.imgContainer.style.left = '-710%';
+    highlightDot(9);
+  }
 }
 
-// function autoPlay() {
+let intervalId;
 
-// }
+function autoAdvance() {
+  if (!intervalId) {
+    intervalId = setInterval(advanceForward, 7000);
+  }
+}
+
+function stopAutoAdvance() {
+  clearInterval(intervalId);
+  intervalId = null;
+}
 
 function manageClicks(e) {
   const eventID = e.target.id;
@@ -59,11 +72,14 @@ function manageClicks(e) {
     back: () => advanceBack(),
   };
   if (actions[eventID]) {
+    stopAutoAdvance();
     actions[eventID]();
+    autoAdvance();
   }
 }
 
 function dotClicks(e) {
+  stopAutoAdvance();
   const { id } = e.target;
   const dotNum = id.replace(/[^0-9]/g, '');
   console.log('dotnum', dotNum);
@@ -72,6 +88,7 @@ function dotClicks(e) {
   const leftPercentage = `${leftNumber}%`;
   selectors().imgContainer.style.left = leftPercentage;
   highlightDot(dotNum);
+  autoAdvance();
 }
 
 function carouselEvent() {
@@ -80,4 +97,4 @@ function carouselEvent() {
   sel.dotContainer.addEventListener('click', (e) => dotClicks(e));
 }
 
-export default carouselEvent;
+export { carouselEvent, autoAdvance };

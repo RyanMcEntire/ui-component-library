@@ -82,7 +82,7 @@ function dotClicks(e) {
   stopAutoAdvance();
   const { id } = e.target;
   const dotNum = id.replace(/[^0-9]/g, '');
-  console.log('dotnum', dotNum);
+  console.log('dotNum', dotNum);
   const leftNumber = 10 - 80 * dotNum;
   console.log('leftNumber', leftNumber);
   const leftPercentage = `${leftNumber}%`;
